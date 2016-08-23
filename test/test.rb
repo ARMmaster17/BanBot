@@ -1,5 +1,5 @@
 #require_relative "test_helper"
-#require "test/unit"
+require "test/unit"
 require 'rack/test'
 require_relative '../frontend/main'
 

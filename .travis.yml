@@ -1,20 +1,12 @@
 language: ruby
 cache: bundler
 rvm:
-  - 2.2.5
+  - 2.3.0
 git:
   submodules: false
 env:
   global:
     - RACK_ENV=test
-services:
-  - rabbitmq
-notifications:
-  email:
-    recipients:
-      - wordman05@gmail.com
-    on_success: change
-    on_failure: always
 branches:
   only:
     - master
@@ -22,7 +14,6 @@ install:
   - bundle install
 script:
   - ./scripts/setupdb.sh
-#  - ruby ./backend/main.rb &
   - rake test --trace
 deploy:
   provider: heroku
