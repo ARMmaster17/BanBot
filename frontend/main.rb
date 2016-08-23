@@ -30,7 +30,7 @@ get '/' do
 end
 
 post '/auth/login' do
-  usrs = Users.find_by(username: params[:uname], password: params[:pword]).first
+  usrs = Users.find_by(username: params[:uname], hashed_password: params[:pword]).first
   if usrs.nil?
     # User did not authenticate correctly.
     redirect '/'
