@@ -55,14 +55,14 @@ get '/dashboard' do
     slim :dashboard
 end
 
-post 'api/v1/data/chats' do
+post '/api/v1/data/chats' do
     if !login?
         redirect '/'
     end
   data = Chats.create(bot_id: params[:bot_id], group_id: params[:group_id], admin_username: params[:admin_username])
 end
 
-post 'api/v1/data/badwords' do
+post '/api/v1/data/badwords' do
     if !login?
         redirect '/'
     end
