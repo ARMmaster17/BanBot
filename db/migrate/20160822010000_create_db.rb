@@ -1,4 +1,4 @@
-class CreateEntry < ActiveRecord::Migration
+class CreateDb < ActiveRecord::Migration
   def up
     create_table :chats do |t|
   	  t.integer :bot_id
