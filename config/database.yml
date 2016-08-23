@@ -1,0 +1,12 @@
+development:
+  adapter: postgresql
+  database: banbot
+  host: localhost
+  username: postgres
+  password: test
+test:
+  adapter: postgresql
+  database: travis_ci_test
+  username: postgres
+production:
+  adapter: postgresql
