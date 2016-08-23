@@ -15,11 +15,12 @@ set :bind, ENV['IP'] || '0.0.0.0'
 
 helpers do
   def login?
-      if session[:auth].nil? || session[:auth] == false
-          return false
-      else
-        return true
-      end
+      #if session[:auth].nil? || session[:auth] == false
+      #    return false
+      #else
+      #  return true
+      #end
+      return true
   end
 end
 
